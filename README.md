@@ -83,7 +83,7 @@ MatchMate follows the **MVVM** (Model–View–ViewModel) pattern:
 
 ## Why We Added Extra Fields (Education & Religion)
 
-The assignment asked for at least two extra fields beyond what the Random User API provides. I chose:
+The assignment asked for at least two extra fields beyond what the Random User API provides. we chose:
 
 - **Education** (e.g., High School, Bachelor’s, Master’s, PhD)
 - **Religion** (e.g., Hindu, Muslim, Christian, Sikh, Other)
