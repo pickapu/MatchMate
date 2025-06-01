@@ -57,8 +57,8 @@ class MatchAdapter(
                     }
 
                     override fun onResourceReady(resource: Drawable?, model: Any?, target: Target<Drawable>?, dataSource: DataSource?, isFirstResource: Boolean): Boolean {
-                        if (resource != null) binding.ivProfile.setImageDrawable(resource)
                         binding.ivProfileTV.visibility = View.GONE
+                        if (resource != null) binding.ivProfile.setImageDrawable(resource)
                         return true
                     }
 
