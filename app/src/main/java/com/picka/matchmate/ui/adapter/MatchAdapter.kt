@@ -1,6 +1,7 @@
 package com.picka.matchmate.ui.adapter
 
 import android.graphics.drawable.Drawable
+import android.graphics.drawable.GradientDrawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -46,6 +47,10 @@ class MatchAdapter(
                 .load(profile.pictureUrl)
                 .listener(object : RequestListener<Drawable> {
                     override fun onLoadFailed(e: GlideException?, model: Any?, target: Target<Drawable>?, isFirstResource: Boolean): Boolean {
+                        binding.ivProfileTV.background = GradientDrawable().apply {
+                            shape = GradientDrawable.OVAL
+                            setColor(binding.cardContainer.context.getColor(R.color.teal_200))
+                        }
                         binding.ivProfileTV.text = profile.fullName[0].toString().uppercase()
                         binding.ivProfile.visibility = View.GONE
                         return false

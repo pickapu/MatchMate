@@ -12,18 +12,11 @@ MatchMate is a small Android app written in Kotlin that fetches random user prof
    - Java 11 or newer (required by Gradle 8)
    - An Android device or emulator (minimum API 21)
 
-2. **Clone or Download**
-   ```bash
-   git clone https://github.com/yourusername/MatchMate.git
-   cd MatchMate
-   ```
-   Alternatively, unzip the provided `MatchMate_Hilt_Project.zip`.
-
-3. **Open in Android Studio**
+2. **Open in Android Studio**
    - Choose **“Open an existing project”** and navigate to the `MatchMate` folder.
    - Let Gradle sync (it will fetch Hilt, Retrofit, Room, Glide, and other dependencies).
 
-4. **Run the App**
+3. **Run the App**
    - Connect an Android device or start an emulator.
    - Click **Run ▶** in Android Studio.
    - When the app launches, swipe down to load profiles from the network.
@@ -90,7 +83,7 @@ MatchMate follows the **MVVM** (Model–View–ViewModel) pattern:
 
 ## Why We Added Extra Fields (Education & Religion)
 
-The assignment asked for at least two extra fields beyond what the Random User API provides. We chose:
+The assignment asked for at least two extra fields beyond what the Random User API provides. I chose:
 
 - **Education** (e.g., High School, Bachelor’s, Master’s, PhD)
 - **Religion** (e.g., Hindu, Muslim, Christian, Sikh, Other)
@@ -154,6 +147,6 @@ We want a number between 0 and 100 that indicates how well someone matches “y
   Using MVVM with Hilt made the code easy to follow—data logic lives in the repository, UI logic is in the Activity/Adapter, and ViewModel bridges the two. Room + Flow ensures seamless offline behavior, and Retrofit + Coroutines keep network calls straightforward.
 
 - **No-Images Constraint**:
-  If a rule came in that we can’t show profile pictures, we replaced the ImageView in each card with a TextView that displays the person’s initials (e.g., “JD” for “John Doe”) on a circular background. This way, no actual images are used, but there’s still a simple visual identifier.
+  If a rule came in that we can’t show profile pictures, we replaced the ImageView in each card with a TextView that displays the person’s initials (e.g., “J” for “John”) on a circular background. This way, no actual images are used, but there’s still a simple visual identifier.
 
 ---
